@@ -1,0 +1,4 @@
+#!/bin/bash
+trap '{ pkill webhookd ; exit ; }' EXIT SIGINT
+source /home/syretia/webhookd/webhookd.env
+/home/syretia/webhookd/webhookd

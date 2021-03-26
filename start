@@ -1,0 +1,4 @@
+#!/bin/bash
+# trap '{ sudo pkill webhookd ; exit ; }' EXIT SIGINT
+cd ~/webhookd
+su webhookd -c ~/webhookd/webhookdstart
