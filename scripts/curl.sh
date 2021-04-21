@@ -18,7 +18,7 @@ case "$key_hash" in
 esac
 
 # remove any files left behind in case process was killed by webhookd
-for dir in $(ls /home/webhookd/runner/curl); do
+for dir in $(ls -a /home/webhookd/runner/curl | tail -n +3); do
     # break if nothing
     [[ -z "$dir" ]] && break
     # get date dir was created by removing random string at end
